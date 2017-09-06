@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Profile</title>
+	
+	 <style>
+ 
+	div.container{
+	
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		background-color: gray;
+		left: 0px;
+		top: 0px;
+		margin: 0;
+		margin-right: 0;
+		overflow-y:auto;
+		overflow-x:auto;
+	}
+	div.card{
+	
+		position:absolute;
+		width: 30%;
+		height: 75%;
+		background-color: gray;
+		left: 1.953%;
+		top: 100px;
+		margin: 0;
+		margin-right: 0;
+		border-style: solid;
+		border-color: white;
+	}
+	header {
+		position: relative;
+		width 100%;
+		height: 50px;
+		background-color: black;
+	}
+	
+	.create{
+		position:absolute;
+		left: 35%;
+		top: 200px;
+		width: 100px;
+		height: 100px;
+		background-color: black;
+		border-radius: 100px 100px 100px 100px;
+		opacity: .5;
+		overflow-x: hidden;
+		
+		
+	}
+	.create:active{
+	outline: none;
+		border: none;
+	}
+	.create:focus{
+	
+		outline:0;
+	}
+	.fa fa-plus{
+		position: absolute;
+		left: 45px;
+		top: 45px;
+	}
+	.friend{
+	
+	}
+  </style> 
+  </head>
+ 
+  <body>
+  <div class = "container" id ="c" style = "white-space: nowrap; overflow-x:hidden;" >
+	<header>
+		<i class="fa fa-vcard-o" style="position: absolute; bottom: 5px; left: 5px; font-size:36px; color: white"></i>
+		
+	</header>
+	<button style = "position: fixed; right: 30px; top: 28px;"  id="s" class = "friend" name = "Add Friend" onclick = "addFriend()" >Add Friend</button>
+	<div class = "card">
+		<p style = "position: absolute; top: -20px; left: 25px; font-size:32px; color: white">Profile:</p>
+		<p style=" position: absolute; top: 70px; left: 25px"  id="user">Email: </p>
+		<p style=" position: absolute; top: 120px; left: 25px"  id="fName">First Name: </p>
+		<p style=" position: absolute; top: 170px; left: 25px"  id="lName">Last Name: </p>
+		<p style=" position: absolute; top: 220px; left: 25px"  id="bDay">Birthday: </p>
+		<p style=" position: absolute; top: 270px; left: 25px"  id="gen">Gender: </p>
+		<p style=" position: absolute; top: 320px; left: 25px"  id="particGroups">Number of Contributions:</p>
+		<p style=" position: absolute; top: 370px; left: 25px"  id="activeGroups">Involved Groups:</p>
+		<p style=" position: absolute; top: 420px; left: 25px"  id="impact">Impact of Contributions:</p>
+		<p style=" position: absolute; top: 470px; left: 25px"  id="discussions">Active Discussions:</p>
+		
+	</div>
+	
+	<button class = "create" onclick = "add()" id = "create"> <i class="fa fa-plus" style="position: absolute; left: 31px; top: 29px; font-size:48px; color:white; white-space: nowrap; overflow:hidden;"></i></button>
+  </div>
+  
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script type="text/javascript" src="ajax.js"></script>
+  		<script type="text/javascript">
+	
+ document.getElementById("user").innerHTML = "Email: " + sessionStorage.getItem("t_email");
+ document.getElementById("fName").innerHTML = "First Name: " + sessionStorage.getItem("t_fname");
+ document.getElementById("lName").innerHTML = "Last Name: " + sessionStorage.getItem("t_lname");
+ document.getElementById("bDay").innerHTML = "Birthday: " + sessionStorage.getItem("t_bday");
+ document.getElementById("gen").innerHTML = "Gender: " + sessionStorage.getItem("t_gen");
+
+		var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "http://localhost/AY/user/isFriend.PHP", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+			xhttp.send();
+				xhttp.onreadystatechange = function() {
+			 if (this.readyState == 4 && this.status == 200) {
+			var lol = this.responseText;
+			myObj = JSON.parse(this.responseText);
+			
+			if(myObj.sent == true) { 
+				var myAnchor = document.getElementById("s");
+				var myP = document.createElement("P");
+				myP.innerHTML = "Friend request pending!";
+				myP.style.position = "fixed";
+				myP.style.right = "30px";
+				myP.style.top = "5px";
+				myP.style.color = "white";
+				myAnchor.parentNode.replaceChild(myP, myAnchor);
+					}
+				}
+			};
+			
+		</script>
+		<script type="text/javascript">
+		function addFriend(){
+		var value = true;
+		
+		var xhttp = new XMLHttpRequest();
+			xhttp.open("POST", "http://localhost/AY/user/addFriend.PHP", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+			xhttp.send("value=" + value);
+		
+			xhttp.onreadystatechange = function() {
+			 if (this.readyState == 4 && this.status == 200) {
+			myObj = JSON.parse(this.responseText);
+			alert("YEAHWY");
+			var myAnchor = document.getElementById("s");
+				var myP = document.createElement("P");
+				myP.innerHTML = myObj.friendERM;
+				myP.style.position = "fixed";
+				myP.style.right = "30px";
+				myP.style.top = "5px";
+				myP.style.color = "white";
+				myAnchor.parentNode.replaceChild(myP, myAnchor);
+			//location.reload(true);
+			
+		}
+			};
+			}
+		</script>
+</html>
+

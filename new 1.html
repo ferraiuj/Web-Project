@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html  class="no-js">
+	<head>
+		<style id = "wow">
+
+			#headerLink1{
+			
+				 position: fixed;
+				 top:25px;
+				 left: 190px;
+				 width: 28px;
+			}
+			#headerLink2{
+			
+				 position: fixed;
+				 top:25px;
+				 left: 225px;
+				 width: 75px;
+				 display: none;
+			}
+			
+			#link1{
+				 position: fixed;
+				 top: 350px;	
+			}
+			#link2{
+			
+				 position: fixed;
+				 top:200px;
+			}
+			#link3{
+				 position: fixed;
+				 top: 100px;	
+			}
+			#link4{
+			
+				 position: fixed;
+				 top:150px;
+				 	
+			}
+			#link5{
+			
+				 position: fixed;
+				 top:250px;
+				 	
+			}
+			#link6{
+			
+				 position: fixed;
+				 top:300px;
+				 	
+			}		
+			#link7{
+			
+			     position: fixed;
+				 top:450px;
+			}
+			#link8{
+			
+			     position: fixed;
+				 top:400px;
+			}
+			
+			.signIn{
+				 display: none;
+			}
+			
+			a:link {
+				
+				 position: fixed;
+				 background-color: black;
+				 border: none;
+				 font-size: 20px;
+				 margin-left: 0px;
+				 color: white;
+				 text-align: left;
+				 text-decoration: none;
+			     overflow: hidden;
+				 cursor: pointer;
+				 left:0px;
+				 width: 141px;
+			}
+
+			a:visited{
+			
+				 color: white;
+			}
+
+			a:hover {
+				 border: none;
+				
+				 cursor: pointer;
+			}
+
+			a:active {
+				 color: blue;
+			}
+	
+			
+			#grad1 {
+
+				 background: red; /* For browsers that do not support gradients */
+				 background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+				 background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+				 background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+				 background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+			}
+
+			
+			.leftButtonAnim{
+				 position: fixed;
+				 width: 30px;
+				 height:100px;
+				 top:155px;
+				 left: 176px;
+			
+			}
+			.rightButtonAnim{
+				 position: fixed;
+				 right: 0px;
+				 width: 30px;
+				 height:100px;
+				 top:155px;
+			}
+			#dem{
+
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: red;
+				 position: fixed;
+
+				 -webkit-animation: mymove 30s infinite;  
+				 -webkit-animation-fill-mode: forwards;
+				 -webkit-animation-timing-function: linear; 
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: forwards;
+			 	 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+				 z-index = -2;
+
+			}
+
+			#dem1 {
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: both;
+				 -webkit-animation-delay: 3s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: both;
+				 animation-delay:3s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem2 {
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 4s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:6s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem3 {
+			
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 6s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:9s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem4{
+			
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 12s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:12s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem5{
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 15s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:15s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem6 {
+			
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 18s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+			 	 animation-fill-mode: backwards;
+				 animation-delay:18s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+	
+			}
+			#dem7
+			{
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 21s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+	
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:21s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem8{
+			
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: black;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 24s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:24s;
+				 animation-timing-function: linear;
+			 	 border-radius: 25px 25px 25px 25px;
+
+			}
+			#dem9 {
+			
+				 cursor: pointer;
+				 width: 100px;
+				 height: 100px;
+				 background: blue;
+				 position: fixed;
+				 -webkit-animation: mymove 30s infinite;  /* Safari 4.0 - 8.0 */
+				 -webkit-animation-fill-mode: backwards;
+				 -webkit-animation-delay: 27s;/* Safari 4.0 - 8.0 */
+				 -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+
+				 animation: mymove 30s infinite;
+				 animation-fill-mode: backwards;
+				 animation-delay:27s;
+				 animation-timing-function: linear;
+				 border-radius: 25px 25px 25px 25px;
+
+			}
+			@-webkit-keyframes mymove {
+
+				 from{left: 0px;}
+				 to {left: 1350px;}
+				 from{top: 50px;}
+				 to {top: 50px;}
+
+			}
+
+			@-webkit-keyframes mymove2 {
+
+			}
+			
+			header {
+			
+				 top: -12px;
+				 left: 1px;
+
+				 position: relative;
+				 color: white;
+				 background-color: black;
+				 text-align: center;
+				 height: 50px;
+
+			}
+
+			footer{
+			
+				 position: relative;
+				 padding: 1em;
+				 color: white;
+				 background-color: gray;
+				 clear: left;
+				 text-align: center;
+				 height:100px;
+				 bottom: 70px;
+				 z-index: 1;
+
+			}
+			nav {
+				 border-radius: 25px 25px 25px 0px;
+				 position: relative;
+				 background-color: black;
+
+				 left: -18px;
+				 height: 500px;
+				 overflow: hidden;
+				 max-width: 160px;
+				 padding-top: 75px;
+				 z-index: 2;
+			}
+
+			nav ul {
+			
+				 list-style-type: none;
+				 padding: 0;
+
+			}
+			nav ul a {
+			
+				 text-decoration: none;
+			}
+
+			.sanserif	{
+			
+				 font-family: Impact, Helvetica, sans-serif;
+
+			}
+			
+			article {
+
+				 position: fixed;
+				 top: -8px;
+				 left: -1px;
+				 width: 100%;
+				 height: 90%;
+				 overflow: hidden;
+				 background-color:gray;
+				 z-index: -1;	
+			}
+		
+			section.sec{
+
+				 top: -59px;
+				 left: 0px;
+				 height: 600px;
+				 border-radius: 25px 25px 25px 0px;
+				 position: relative;
+			   	 background-color: red;
+
+				 max-width: 160px;
+				 padding: 1em;
+				 margin-left: 0px;
+				 padding-left: 0;
+				 padding-top: 0;
+				 overflow: hidden;
+			   	 z-index: 1;
+			}
+			.crtGrp{
+				 width: 200px;
+				 border-radius:  5px 5px 5px 5px;
+				 overflow: hidden;
+				 cursor: pointer;
+				 background-color:white;
+				 border-style: solid;
+				 border-color: gray;
+			}
+			.signInEmail{
+				display: none;
+				 border-radius:  5px 5px 5px 5px;
+				 overflow: hidden;
+				 cursor: pointer;
+				 background-color:white;
+				 border-style: solid;
+				 border-color: gray;
+			}
+			.signInPassword{
+				 display: none;
+				 position: fixed;
+				 border-radius:  5px 5px 5px 5px;
+				 overflow: hidden;
+				 cursor: pointer;
+				 background-color:white;
+				 border-color: gray;
+				
+				 border-style: solid;
+				}
+			.w{
+			
+				
+			}
+			
+			.signInEmail:active{
+	
+				 outline: none;
+				 border: none;
+			}
+			.signInEmail:focus{
+	
+				 outline:0;
+			}.signInPassword:active{
+			
+				 outline: none;
+				 border: none;
+			}
+			.signInPassword:focus{
+	
+				 outline:0;
+			}
+			
+			.modal {
+			
+				display: none;
+				position: fixed; 
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%; 
+				height: 100%; 
+				overflow: auto; 
+				background-color: rgb(0,0,0); 
+				background-color: rgba(0,0,0,0.4); 
+				-webkit-animation-name: fadeIn; 
+				-webkit-animation-duration: 0.4s;
+				animation-name: fadeIn;
+				animation-duration: 0.4s
+			}
+			.modal-content {
+			
+				position: fixed;
+				bottom: 0;
+				background-color: #fefefe;
+				width: 75%;
+				height: 75%;
+				margin-left: 12.5%;
+				margin-bottom: 12.5%;
+				-webkit-animation-name: slideIn;
+				-webkit-animation-duration: 0.4s;
+				animation-name: slideIn;
+				animation-duration: 0.4s
+			}
+			.close {
+			
+				color: white;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			
+			.close:hover,
+			.close:focus {
+			
+				color: #000;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.modal-header {
+			
+				padding: 2px 16px;
+				background-color: black;
+				color: white;
+			}
+			.modal-body {padding: 2px 16px;}
+			
+			.modal-footer {
+				position:absolute;
+				padding: 0px;
+				background-color: black;
+				color: white;
+				bottom: 0px;
+				width: 100%;
+			}
+			
+			@-webkit-keyframes slideIn {
+				from {bottom: -300px; opacity: 0} 
+				to {bottom: 0; opacity: 1}
+			}
+			@keyframes slideIn {
+				from {bottom: -300px; opacity: 0}
+				to {bottom: 0; opacity: 1}
+			}
+			@-webkit-keyframes fadeIn {
+				from {opacity: 0} 
+				to {opacity: 1}
+			}
+
+			@keyframes fadeIn {
+				from {opacity: 0} 
+				to {opacity: 1}
+			}
+
+		</style>
+
+	
+		<title>ImHome 
+		</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body> 
+			
+	<section id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <section class="modal-content">
+    <section class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Create A Group And Be The Change</h2>
+    </section>
+    <section class="modal-body">
+	<form>
+	<br>
+       <input type = "text" autocomplete = "off" class = "crtGrp" style = "position: absolute; top: 100px;" placeholder = "group name"></input>
+       <input type = "text" autocomplete = "off" class = "crtGrp" style = "position: absolute; top: 150px;" placeholder = "group description"></input>
+       <input type = "text" autocomplete = "off" class = "crtGrp" style = "position: absolute; top: 200px;" placeholder = "group tags"></input>
+       <input type = "text" autocomplete = "off" class = "crtGrp" style = "position: absolute; top: 250px;" placeholder = "send invitations"></input>
+       <input type = "text" autocomplete = "off" class = "crtGrp" style = "position: absolute; top: 300px;" placeholder = "level of privacy"></input>
+       <p class = "crtGrp" style = "position: absolute; top: 350px;">For the best results in finding important group interactions, it is in your interest to submit a relevant group name, group description and accurate tags</p>
+	 </form>
+    </section>
+    <section class="modal-footer">
+      <h3></h3>
+    </section>
+  </section>
+
+</section>
+		<article> 
+				<div class= "one" onclick="myFunction(this)" id = "dem"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem1"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem2"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem3"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem4"></div> 
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem5"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem6"></div> 
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem7"></div>
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem8"></div> 
+				<div class= "one" style ="height: 100px; width: 100px" onclick="myFunction(this)" id ="dem9"></div>
+
+				<button class = "leftButtonAnim" onclick = "moveLeft()" > <i class="fa fa-chevron-left"></i> </button>
+				<button class = "rightButtonAnim" onclick = "moveRight()" > <i class="fa fa-chevron-right"></i></button>
+				
+			<header id = "dead" > 
+			
+				<h1 class = "sanserif" >ImHome</h1>
+				
+				<input type = "text" autocomplete = "off" class = "signInEmail" rows="1" style = "position: fixed; resize: none; left: 525px; top:28px; white-space: nowrap; overflow:hidden; " placeholder = " email" rows="1"  id="email">
+				<input type = "password" class = "signInPassword" name ="p" rows="1" style = "position: fixed; left: 700px; resize: none; top:28px; white-space: nowrap; overflow:hidden;  " placeholder = " password" id="pass">
+				<input type= "submit" style = "position: fixed; left: 875px; top:28px;"  id="submit" class = "signIn" onclick = "send()">
+				<a href="http://localhost/AY/User/User.html" style=" position: fixed; top: 25px; left: 200px; display: none; font-size: 20px; width:200px;"  id="w"></a> 
+				<a id = "headerLink2" style= "display: none;" href="http://localhost/AY/logn/sign.php">Sign Up</a>	
+					
+				<input type = "text" style = "position: fixed; top: 25px; right: 2px; resize: none; width: 250px; white-space: nowrap; overflow:hidden;" placeholder = "search" id = "search"></input>
+				<a href="#" id = "abc"> <i class="material-icons" style = "position: fixed; top: 25px; right: 14%" onclick = "searchUse()">search</i></a>
+				
+				
+				<section class = "sec" id="grad1">
+			
+					<nav>
+						<a id = "link1" href="http://localhost/AY/fight/f12.html" style = "display:none;">Participation</a>
+						<a id = "link2" href="http://localhost/AY/User/notification.HTML"style = "display:none;">Notifications
+							<p style ="position:absolute; font-size:9px; color:red; right: 25px; top: -5px;" id = "notNum"></p>
+						</a>
+						<a id = "link3" href="#">Interactions</a>
+						<a id = "link4" href="#">Find Groups</a>
+						<a id = "link5" href="#" style = "display:none;">Create Group</a>
+						<a id = "link6" href="#" style = "display:none;">My Archive</a>
+						<a id = "link8" href="#" style = "display:none;">Friends</a>
+						<a id = "link7" href="#"style = "display:none;" onclick = "logOut()">Log Out</a>
+					</nav>
+				</section>
+				<footer></footer>
+			</header>
+		</article>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script type="text/javascript" src="ajax.js"></script>
+		<script>
+		
+		var modal = document.getElementById('myModal');
+		var createGrp = document.getElementById("link5");
+		var span = document.getElementsByClassName("close")[0];
+		
+		createGrp.onclick = function() {
+			modal.style.display = "block";
+		}
+		
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+			modal.style.display = "none";
+			}
+		}
+		</script>
+		<script type="text/javascript">
+		function searchUse(){
+			var value = document.getElementById("search").value;
+			
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("POST", "http://localhost/AY/user/friendSearch.PHP", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+			xhttp.send("value=" + value);
+		
+			xhttp.onreadystatechange = function() {
+			 if (this.readyState == 4 && this.status == 200) {
+			var user = this.responseText;
+			
+			myObj = JSON.parse(this.responseText);
+			if(myObj.rt == true){
+			sessionStorage.setItem("t_id", myObj.id);
+			sessionStorage.setItem("t_fname", myObj.tfname);
+			sessionStorage.setItem("t_lname", myObj.tlname);
+			sessionStorage.setItem("t_bday", myObj.tbDay);
+			sessionStorage.setItem("t_gen", myObj.tGen);
+			sessionStorage.setItem("t_email", myObj.tEmail);
+			document.getElementById("abc").href="http://localhost/AY/User/friend.html"; 
+			alert(user);
+			document.getElementById('abc').click();
+			
+			}
+			}
+			};
+		}
+		
+		</script>
+		
+		<script type="text/javascript">
+	var lg = false;
+function send(){
+		
+		var email = document.getElementById("email").value;
+		var pass = document.getElementById("pass").value;
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "http://localhost/AY/val.php", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+		xhttp.send("email=" + email + "&pass=" + pass);
+		
+		xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		
+			var info = this.responseText;
+			myObj = JSON.parse(this.responseText);
+			sessionStorage.setItem("Value", info);
+			
+			if(myObj.rt == true){
+			//sets retrieve in val.php to true so function loggedIn() can see something other than null (can only be set here)
+			//I suspect that the document is not ready when some of the page loads...though i can still select the hidden elements
+				sessionStorage.setItem("in", myObj.rt);
+				sessionStorage.setItem("f", myObj.fName);
+				sessionStorage.setItem("l", myObj.lName);
+				sessionStorage.setItem("use", myObj.user);
+				sessionStorage.setItem("bDay", myObj.bDay);
+				sessionStorage.setItem("gen", myObj.gen);
+				sessionStorage.setItem("id", myObj.id);
+				sessionStorage.setItem("nplus", myObj.nplus);
+				
+				
+				location.reload(true);
+				}
+			}
+	   };	
+
+}
+	
+if(lg === false){
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "http://localhost/AY/User/logOut.php", true);
+		xhttp.send();
+			
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		var info = this.responseText;
+		
+		myObj = JSON.parse(this.responseText);
+		sessionStorage.setItem("in", myObj.rt);
+		if(myObj.rt == true){
+	
+			sessionStorage.setItem("in", myObj.rt);
+				sessionStorage.setItem("f", myObj.fName);
+				sessionStorage.setItem("l", myObj.lName);
+				sessionStorage.setItem("use", myObj.user);
+				sessionStorage.setItem("bDay", myObj.bDay);
+				sessionStorage.setItem("gen", myObj.gen);
+				sessionStorage.setItem("id", myObj.id);
+				sessionStorage.setItem("nplus", myObj.nplus);
+			}
+	  	
+	   } 
+	  };
+	  }
+		function loggedIn(){
+
+			 if(sessionStorage.getItem("in") !== null){
+					
+				var w = document.getElementById("w");
+				var a = document.getElementById("link7");
+				var b = document.getElementById("link2");
+				var c = document.getElementById("link5");
+				var d = document.getElementById("link6");
+				var e = document.getElementById("link1");
+				var f = document.getElementById("link8");
+				var h = document.getElementById("notNum");
+				
+				//there is an error where refreshing hides all header elements if you declare any element visible or invisible whether it be inline or in CSS (HUGE) reminder to try to fix so that u cant c the elements on refresh
+				//the problem is here
+				
+				w.style.display = 'block';
+				a.style.display = 'block';
+				b.style.display = 'block';
+				c.style.display = 'block';
+				d.style.display = 'block';
+				e.style.display = 'block';
+				f.style.display = 'block';
+				
+				if(sessionStorage.getItem("nplus") > 0){
+				
+				document.getElementById("notNum").innerHTML = sessionStorage.getItem("nplus");
+				}
+				document.getElementById("w").innerHTML = "Hello, " + sessionStorage.getItem("f"); 
+				
+			}else if (sessionStorage.getItem("in") === null){
+			
+				var child = document.getElementById("email");
+				var child1 = document.getElementById("pass");
+				var child2 = document.getElementById("submit");
+				var child3 = document.getElementById("headerLink2");
+				
+				
+				child.style.display = 'block';
+				child1.style.display = 'block';
+				child2.style.display = 'block';
+				child3.style.display= "block";
+				
+			}
+		}
+		$(document).ready(function(){
+			// we call the function
+			loggedIn();
+		});
+		
+		function logOut(){
+			var logOut = true;
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("POST", "http://localhost/AY/User/logOut.php", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		
+			xhttp.send("logOut=" + logOut);
+
+			sessionStorage.clear();
+			
+			location.reload(true);
+			
+		}
+		
+		</script>
+		<script>
+
+			var huh = 0;
+			var left = 0;
+			var left2 = 0;
+			var xxx = 0;
+			var i = 0;
+
+			var posy = 0;
+
+			var b = 0;
+            var topp = 0;
+
+			var list = document.getElementsByTagName("div");
+		function myFunction(obj) {
+
+			var createdStyleTag = document.createElement("style");
+			var createdStyleTa = document.createElement("style");
+
+			
+
+			var rect = obj.getBoundingClientRect();	
+			
+			left = rect.left;
+			topp = rect.top;
+
+
+			var y = document.getElementById(obj.id);
+			
+			if(obj.id == "dem"){
+			i = 0;
+			b = i + 1;
+			}
+			else if(obj.id == "dem1"){
+			i = 1;
+			b = i + 1;
+			}
+			else if(obj.id == "dem2"){
+			i = 2;
+			b = i + 1;
+			}
+			else if(obj.id == "dem3"){
+			i = 3;
+			b = i + 1;
+			}
+			else if(obj.id == "dem4"){
+			i = 4;
+			b = i + 1;
+			}
+			else if(obj.id == "dem5"){
+			i = 5; 
+			b = i + 1;
+			}
+			else if(obj.id == "dem6"){
+			i = 6;
+			b = i + 1;
+			}
+			else if(obj.id == "dem7"){
+			i = 7;
+			b = i + 1;
+			}
+			else if(obj.id == "dem8"){
+			i = 8;
+			b = i + 1;
+			}
+			else if(obj.id == "dem9"){
+			i = 9;
+			b = 0;
+			
+			}
+
+			var rect2 = list[b].getBoundingClientRect();
+
+			if(topp <= 50 && posy == 0){
+				
+					list[i].style.left = left + 'px';
+					list[i].style.top = topp + 'px';
+			
+					posy = 1;
+					
+					obj.style.animation = "mymove1 1s forwards";
+
+					createdStyleTag.textContent = "@-webkit-keyframes mymove1{"+
+					"from { left:; width: 100px;}"+
+					"to { left: 600px; width: 300px;}"+
+					"from { top: list[i].style.top; height: 100px;}"+
+					"to{top: 200px; height: 300px;}"+ 
+					"}";
+
+					
+					document.head.appendChild(createdStyleTag);
+
+			}else if(topp >= 51 && posy == 1){
+				posy = 0;
+				left2 = rect2.left + 135;
+					if(left2 > 1350){
+						left2 = (rect2.left + 135) - 1350;
+					}
+					var hold = (1350 - left2) / 45;
+					var n = hold + "s";
+	
+					createdStyleTa.textContent = "@-webkit-keyframes mymove2{"+
+					"from { left:; width: 100px;}"+
+					"to { left: 1350px; width: 100px;}"+	
+					"from { top: 50px; height: 100px;}"+
+					"to{top: 50px; height: 100px;}"+
+					"}";
+					
+					document.head.appendChild(createdStyleTa);
+					
+					obj.addEventListener("webkitAnimationIteration", myRepeatFunction);
+					
+					list[i].style.left = left2 + 'px';
+					
+					obj.style.animation = "mymove2 30s infinite linear"; 
+					
+					document.getElementById(obj.id).style.WebkitAnimationDuration = n;
+					
+					}
+				}
+				
+				function myRepeatFunction() {
+					
+					this.style.animation = "mymove 30s infinite linear";
+					
+				}
+
+				function moveLeft(){
+					
+					var ii = 0;
+					
+					//var list = document.getElementsByTagName("div");
+					
+						
+					
+					var oneL = list[0].getBoundingClientRect();
+					var twoL = list[1].getBoundingClientRect();
+					var threeL = list[2].getBoundingClientRect();
+					var fourL = list[3].getBoundingClientRect();
+					var fiveL = list[4].getBoundingClientRect();
+					var sixL = list[5].getBoundingClientRect();
+					var sevenL = list[6].getBoundingClientRect();
+					var eightL = list[7].getBoundingClientRect();
+					var nineL = list[8].getBoundingClientRect();
+					var tenL = list[9].getBoundingClientRect();
+					var l = [oneL.left - 50, twoL.left - 50, threeL.left - 50, fourL.left - 50, fiveL.left - 50, sixL.left - 50, sevenL.left - 50, eightL.left - 50, nineL.left - 50, tenL.left - 50];
+				
+					
+					list[0].style.left = l[0] + 'px';
+					list[1].style.left = l[1] + 'px';
+					list[2].style.left = l[2] + 'px';
+					list[3].style.left = l[3] + 'px';
+					list[4].style.left = l[4] + 'px';
+					list[5].style.left = l[5] + 'px';
+					list[6].style.left = l[6] + 'px';
+					list[7].style.left = l[7] + 'px';
+					list[8].style.left = l[8] + 'px';
+					list[9].style.left = l[9] + 'px';
+					
+					for(ii = 0; ii < list.length; ii++){
+						list[ii].style.top = 50 + 'px';
+						list[ii].style.left = l[ii] + 'px';
+						
+						list[ii].style.animation = "paused";
+					}
+					
+				}
+				function moveRight(){
+						
+					
+					var oneL = list[0].getBoundingClientRect();
+					var twoL = list[1].getBoundingClientRect();
+					var threeL = list[2].getBoundingClientRect();
+					var fourL = list[3].getBoundingClientRect();
+					var fiveL = list[4].getBoundingClientRect();
+					var sixL = list[5].getBoundingClientRect();
+					var sevenL = list[6].getBoundingClientRect();
+					var eightL = list[7].getBoundingClientRect();
+					var nineL = list[8].getBoundingClientRect();
+					var tenL = list[9].getBoundingClientRect();
+					var l = [oneL.left + 5, twoL.left + 5, threeL.left + 5, fourL.left + 5, fiveL.left + 5, sixL.left + 5, sevenL.left + 5, eightL.left + 5, nineL.left + 5, tenL.left + 5];
+				
+					
+					list[0].style.left = l[0] + 'px';
+					list[1].style.left = l[1] + 'px';
+					list[2].style.left = l[2] + 'px';
+					list[3].style.left = l[3] + 'px';
+					list[4].style.left = l[4] + 'px';
+					list[5].style.left = l[5] + 'px';
+					list[6].style.left = l[6] + 'px';
+					list[7].style.left = l[7] + 'px';
+					list[8].style.left = l[8] + 'px';
+					list[9].style.left = l[9] + 'px';
+					
+					for(ii = 0; ii < list.length; ii++){
+					
+						if(l[ii] <= 1400){
+						list[ii].style.top = 50 + 'px';
+						list[ii].style.left = l[ii] + 'px';
+						list[ii].style.background = "yellow";
+						list[ii].style.animation = "paused";
+						}
+						else if(l[ii] > 1400){
+						l[ii] = 0;
+						list[ii].style.left = l[ii] + 'px';
+						//list[ii].style.background = "pink";
+						//list[ii].style.animation = "paused";
+						
+						}
+					}
+					
+				}
+				
+				</script>
+			</body>	
+		</html>
+		

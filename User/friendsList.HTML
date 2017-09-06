@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Notifications</title>
+	 <style>
+ 
+	div.container{
+	
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		background-color: gray;
+		left: 0px;
+		top: 0px;
+		margin: 0;
+		margin-right: 0;
+		overflow-y:auto;
+		overflow-x:auto;
+	}
+	div.card{
+	
+		position:absolute;
+		width: 30%;
+		height: 75%;
+		background-color: gray;
+		left: 1.953%;
+		top: 100px;
+		margin: 0;
+		margin-right: 0;
+		border-style: solid;
+		border-color: white;
+		border-width: 5px;
+	}
+	header {
+		position: relative;
+		width 100%;
+		height: 50px;
+		background-color: black;
+	}
+	
+	.create{
+		position:absolute;
+		left: 35%;
+		top: 200px;
+		width: 100px;
+		height: 100px;
+		background-color: black;
+		border-radius: 100px 100px 100px 100px;
+		opacity: .5;
+		overflow-x: hidden;
+		
+		
+	}
+	.create:active{
+	outline: none;
+		border: none;
+	}
+	.create:focus{
+	
+		outline:0;
+	}
+	.fa fa-plus{
+		position: absolute;
+		left: 45px;
+		top: 45px;
+	}
+	.notificationM{
+	position: absolute;
+	
+	height: 10%;
+	}
+	div.notificationM:hover{
+	
+		border-top-style: solid;
+		border-bottom-style: solid;
+		border-color: white;
+		border-width: 3px;
+	}
+	.notificationT{
+	position: absolute;
+	
+	height: 10%;
+	}
+	div.notificationT:hover{
+	
+		border-top-style: none;
+		border-bottom-style: solid;
+		border-color: white;
+		border-width: 3px;
+	}
+	.notificationB{
+	position: absolute;
+	
+	height: 10%;
+	}
+	div.notificationB:hover{
+	
+		border-top-style: solid;
+		border-bottom-style: none;
+		border-color: white;
+		border-width: 3px;
+	}
+	.accept{
+	
+	}
+	
+	.deny{
+	
+	}
+  </style> 
+  </head>
+  
+  <body>
+  <div class = "container" id ="c" style = "white-space: nowrap; overflow-x:hidden;" >
+	<header>
+		<i class="fa fa-vcard-o" style="position: absolute; bottom: 5px; left: 5px; font-size:36px; color: white"></i>
+		
+	</header>
+	
+	<div class = "card">
+		<p style = "position: absolute; border-style: solid; border-color:white; top: -77px; left: -5px; font-size:32px; color: white; border-bottom-style: none; ">Notifications:</p>
+		<div class = "notificationT"style=" position: absolute; border-color:white; top: 0%; left: 0%; width: 100%;  font-size:22px;">
+		<p id="zero" style = "position: absolute;"></p>
+		<button class ="accept" value = "0" style = "position: absolute; top: 33%; left: 70%;" onclick ="accept(this)" >Accept</button>
+		<button class ="deny"   value = "0"style = "position: absolute; top: 33%; left: 85%;" onclick ="deny(this)">Deny</button>
+		</div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 10%; left: 0%; width: 100%;  font-size:22px;"><p id="one" style = "position: absolute;"></p>
+		<button class ="accept" value = "1" style = "position: absolute; top: 33%; left: 70%;" onclick ="accept(this)" >Accept</button>
+		<button class ="deny" value = "1" style = "position: absolute; top: 33%; left: 85%;" onclick ="deny(this)">Deny</button>
+		</div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 20%; left: 0%; width: 100%; font-size:22px;"><p   id="two" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 30%; left: 0%; width: 100%; font-size:22px;"><p  id="three" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 40%; left: 0%; width: 100%; font-size:22px;"><p  id="four" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 50%; left: 0%; width: 100%; font-size:22px;"><p  id="five" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 60%; left: 0%; width: 100%; font-size:22px;"><p  id="six" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 70%; left: 0%; width: 100%; font-size:22px;"><p  id="seven" style = "position: absolute;"></p></div>
+		<div class = "notificationM" style=" position: absolute; border-color:white; top: 80%; left: 0%; width: 100%; font-size:22px;"><p  id="eight" style = "position: absolute;"></p></div>
+		<div class = "notificationB" style=" position: absolute; border-color:white; top: 90%; left: 0%; width: 100%; font-size:22px;"><p  id="nine" style = "position: absolute;"></p></div>
+		
+	</div>
+	
+	
+  </div>
+  <script type="text/javascript">
+
+  	function accept(obj){
+	var index = 0;
+	var accept = true;
+	
+	index = obj.value; 
+
+	var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "http://localhost/AY/accept.PHP", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("accept=" + accept + "&index=" + index);
+		
+		//xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		var info = this.responseText;alert(info);
+		
+		 } 
+	  };
+	
+	}
+	function deny(obj){
+	alert("hey");
+	var index = 0;
+	var accept = false;
+	
+	index = obj.value; 
+	var xhttp = new XMLHttpRequest();
+		xhttp.open("POST", "http://localhost/AY/accept.PHP", true);
+		
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("accept=" + accept + "&index=" + index);
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		var info = this.responseText;alert(info);
+		 } 
+	  };
+	
+	}
+	
+	
+	var xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "http://localhost/AY/frie_not.PHP", true);
+		xhttp.send();
+
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		var info = this.responseText;
+			
+		myObj = JSON.parse(this.responseText);
+		sessionStorage.setItem("zero", myObj.spotZero);
+		sessionStorage.setItem("one", myObj.spotOne);
+		sessionStorage.setItem("two", myObj.spotTwo);
+		sessionStorage.setItem("three", myObj.spotThree);
+		sessionStorage.setItem("four", myObj.spotFour);
+		sessionStorage.setItem("five", myObj.spotFive);
+		sessionStorage.setItem("six", myObj.spotSix);
+		sessionStorage.setItem("seven", myObj.spotSeven);
+		sessionStorage.setItem("eight", myObj.spotEight);
+		sessionStorage.setItem("nine", myObj.spotNine);
+		
+		document.getElementById("zero").innerHTML = sessionStorage.getItem("zero");
+		document.getElementById("one").innerHTML = sessionStorage.getItem("one");
+		document.getElementById("two").innerHTML = sessionStorage.getItem("two");
+		document.getElementById("three").innerHTML = sessionStorage.getItem("three");
+		document.getElementById("four").innerHTML = sessionStorage.getItem("four");
+		document.getElementById("five").innerHTML = sessionStorage.getItem("five");
+		document.getElementById("six").innerHTML = sessionStorage.getItem("six");
+		document.getElementById("seven").innerHTML = sessionStorage.getItem("seven");
+		document.getElementById("eight").innerHTML = sessionStorage.getItem("eight");
+		document.getElementById("nine").innerHTML = sessionStorage.getItem("nine");
+		
+	  	//alert( sessionStorage.getItem("zero")+ sessionStorage.getItem("one"));
+	   } 
+	  };
+	  
+		</script>
+  </body>
+</html>

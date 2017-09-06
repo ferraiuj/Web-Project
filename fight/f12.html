@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	
+
+	<style>
+	
+	
+	div.container{
+	
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(170, 163, 64);
+		left: 0px;
+		top: 0px;
+		margin: 0;
+		margin-right: 0;
+	}
+	div.timer{
+	
+		position:absolute;
+		top: 50px;
+		left: 46%;
+		width: 150px;
+		height: 50px;
+		background-color: rgb(170, 163, 64);
+		text-align: center;
+		font-size: 250%;
+		color: black;
+	}
+	
+	div.timer:hover{
+	
+		border-style: solid;
+		border-color: white;
+		border-width: 1px;
+	}
+	
+
+	
+	
+	div.dropLeft{
+	
+		position: relative;
+		width: 10px;
+		left: 0px;
+		height: 100px;
+		top: 50px;
+		background-color: rgb(204, 201, 124);
+		border-style: none;
+		
+		border-right-color: rgb(210, 209, 158);
+		overflow: hidden;
+		z-index = 1;
+
+	}
+	div.dropRight{
+	
+		position: relative;
+		width: 10px;
+		
+		top: 50px;
+		height: 100px;
+		left: 388px;
+		background-color:rgb(204, 201, 124);
+		border-style: none;
+		
+		border-left-color: rgb(204, 201, 124);
+		z-index = 1;
+		overflow: hidden;
+		
+
+	}
+
+	.left{
+	
+		position: fixed;
+		left: 20%;
+		top: 50px;
+		width: 400px;
+		height: 750px;
+		background-color: rgb(170, 163, 64);
+		border-radius: 25px 25px 0px 25px;
+		border-style: solid;
+		
+	}
+	.right{
+	
+		position: fixed;
+		top: 50px;
+		right: 20%;
+		width: 400px;
+		height: 750px;
+		background-color: rgb(170, 163, 64);
+		border-radius: 25px 25px 0px 25px;
+		border-style: solid;
+		
+	
+	}
+	section.submit{
+	
+		position: absolute;
+		width: 400px;
+		height: 50px;
+		background-color: black;
+		border-radius: 20px 20px 0px 0px;
+	
+	}
+	.send{
+	
+		position: absolute;
+		width: 400px;
+		height: 50px;
+		background-color: black;
+		border-radius: 20px 20px 0px 0px;
+	}
+	
+	textarea.chat{
+	
+		position: absolute;
+		width: 395px;
+		height: 650px;
+		top:50px;
+		background-color: rgb(204, 201, 124);
+		
+		resize: none;
+		border-style: none;
+		color: "black";
+	}
+	
+	.chat:focus{
+	
+		outline:0;
+	}
+	
+	footer{
+	
+		position: fixed;
+		padding: 1em;
+		color: white;
+		background-color: black;
+		clear: left;
+		text-align: center;
+		height:50px;
+		width: 100%;
+		left: 0px;
+		
+		opacity: 0.5;
+		bottom: 0px;
+		z-index: 1;
+	}
+	
+	footer:hover{
+	
+		opacity: 1.0;
+	}
+	
+	.sendButton {
+	
+		position: absolute;
+		border-radius: 0px 0px 0px 22px;
+		border-color: rgb(204, 201, 124);
+		top: 711px;
+		left:-2px;
+		height: 35px;
+		width: 94px;
+		color: black;
+		background-color: rgb(170, 163, 64);
+		text-align: top-left;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+
+	.sendButton:active{
+	
+		outline: none;
+		border: none;
+	}
+	.sendButton:focus{
+	
+		outline:0;
+	}
+	
+	#arrowLeftStyle{
+	
+		position:absolute;
+		right: 50%;
+	}
+	
+	#arrowRightStyle{
+	
+		position:absolute;
+		left: 50%;
+	}
+	
+	div.topic{
+	 
+		position:absolute;
+		top: 100px;
+		left: 42%;
+		width: 292px;
+		height: 100px;
+		background-color: rgb(170, 163, 64);
+		border-style: solid;
+		border-color: black;
+	}
+	#stat{
+	left: 15px;
+		overflow: hidden;
+	}
+	#stat:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#dataB{
+		left: 63px;
+		overflow: hidden;
+	}
+	#dataB:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#comments{
+		left: 98px;
+		overflow: hidden;
+	}
+	#comments:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#factCheck{
+		left: 135px;
+		overflow: hidden;
+	}
+	#factCheck:hover {
+	
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	
+	#stat1{
+		right: 15px;
+		overflow: hidden;
+	}
+	#stat1:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#dataB1{
+		right: 63px;
+		overflow: hidden;
+	}
+	#dataB1:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#comments1{
+		right: 98px;
+		overflow: hidden;
+	}
+	#comments1:hover {
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#factCheck1{
+		right: 135px;
+		overflow: hidden;
+	}
+	#factCheck1:hover {
+	
+		background-color: black;
+		color: rgb(210, 209, 158);
+	}
+	#home{
+	padding: 5px;
+
+	}
+	#home:hover {
+	
+		background-color: black;
+		color: rgb(210, 209, 158);
+		border-radius: 0px 0px 22px 0px;
+	}
+	#link0{
+	background-color: color: rgb(210, 209, 158);
+		color: black;
+		border-radius: 0px 0px 22px 0px;
+	}
+	
+	</style>
+	
+	
+    <title>Discussion Page</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+				
+  </head>
+  <body onload ="timerSet()">
+  
+  <div class ="container">
+	
+	<a id = "link0" href="http://localhost/AY/new%201.html"><i class="fa fa-home" style="font-size:48px" id = "home"></i></a>
+	<i class="fa fa-arrow-left" style="font-size:64px; top: 500px; color: red" id = "arrowLeftStyle"></i>
+	<i class="fa fa-arrow-right" style="font-size:64px; top: 500px"  id = "arrowRightStyle" ></i>
+	
+
+	<div class = "timer" id = "time" onchange = "timerSet()" ></div>
+	<div class = "topic"></div>
+	
+	<div class = "left"> 
+	
+		<section class = "submit"></section> 
+		<textarea type = "text" class = "chat" readonly id = "recieve1"></textarea> 
+		<textarea type = "text" style = "position: absolute; top: 714px; left: 94px; resize: none; width: 300px" placeholder = "Contribute" rows="2" cols="75" id = "submit1"></textarea>
+		<button onclick = "displayInput()" type="submit" class = "sendButton" > Send </button>
+		<div class = "dropLeft" id = "animateDrop" onmouseenter="mouseOverLeft(this)" onmouseleave="mouseExitLeft(this)">
+		<i class="fa fa-angle-double-left"  style = "position:absolute; top: 40%; left: 0px;" ></i>
+			<i class="fa fa-bar-chart" style="position:absolute;font-size:36px; overflow: hidden" id = "stat"></i>
+			<i class="fa fa-database" style="position:absolute;font-size:36px" id = "dataB"></i>
+			<i class="fa fa-comments-o" style="position:absolute;font-size:36px" id = "comments"></i>
+			<i class="fa fa-balance-scale" style="position:absolute;font-size:36px" id = "factCheck"></i>
+		</div>
+		
+	</div>
+	
+	<div class = "right">
+	
+		<section class = "submit"></section> 
+		<textarea class = "chat" readonly></textarea> 
+		<textarea style = "position: absolute; top: 714px; left: 94px; resize: none; width: 300px"  placeholder = "Contribute" rows="2" cols="75"></textarea>
+		<button class = "sendButton"> Send </button>		
+		<div class = "dropRight" id = "animateDrop" onmouseenter="mouseOverRight(this)" onmouseleave="mouseExitRight(this)">
+			<i class="fa fa-angle-double-right" style = "position:absolute; top: 40%; right: 0px "></i>
+			<i class="fa fa-bar-chart" style="position:absolute;font-size:36px; overflow: hidden" id = "stat1"></i>
+			<i class="fa fa-database" style="position:absolute;font-size:36px" id = "dataB1"></i>
+			<i class="fa fa-comments-o" style="position:absolute;font-size:36px" id = "comments1"></i>
+			<i class="fa fa-balance-scale" style="position:absolute;font-size:36px" id = "factCheck1"></i>
+		</div>
+		
+	</div>
+	
+	<footer></footer>
+  </div>
+  
+  <script>
+  
+var setHour = 0;
+var setMin = 0;
+var setSec = 5;
+
+var timeLeft = document.getElementById("time");
+
+var d = new Date();
+var y = d.getSeconds();
+var h11 = setHour;
+var m11 = setMin;
+var s11 = setSec;
+function timerSet(){
+
+var hour = (setHour * 60) * 60;
+var min = (setMin * 60);
+var sec = (setSec);
+var h;
+var m;
+var s;
+
+var secLeft = hour + min + sec;
+
+if(setSec >= 60){
+
+setMin = setMin + setSec / 60;
+setSec = setSec % 60;
+
+}
+if(setMin >= 60){
+
+setHour = setHour + setMin / 60;
+setMin = setMin % 60;
+
+}
+if(setSec > 0 && secLeft > 0){
+		setSec--;			
+}else {
+setSec = 0;
+}
+
+if(setSec == 0 && setMin != 0){
+		setMin--;
+		setSec = 59;
+	}	
+
+if(setMin == 0 && setHour != 0 ){
+		setHour--;
+		setMin = 59
+}
+if(setHour < 10){
+h = "0" + Math.floor(setHour);
+}
+if(setMin < 10){
+m = "0" + Math.floor(setMin);
+}
+if(setSec < 10){
+setSec = "0" + setSec;
+}
+
+
+
+timeLeft.innerHTML = h + ':' + m + ':' + setSec;
+setTimeout(timerSet, 1000);
+
+if(secLeft == 1){
+redArrow();
+}
+//window.alert(secLeft);
+}
+
+function displayInput() {
+
+	var texting = document.getElementById("recieve1").value;
+	var txt =  texting + document.getElementById("submit1").value + '\n';
+	
+    document.getElementById("recieve1").innerHTML = txt;
+	
+}
+function redArrow(){
+
+var leftRed = document.getElementById("arrowLeftStyle");
+var rightRed = document.getElementById("arrowRightStyle");
+setHour = h11;
+setMin = m11;
+setSec = s11;
+
+	if(leftRed.style.color == "red"){
+	
+		leftRed.style.color = "black";
+		rightRed.style.color = "red";
+	
+	}else if(rightRed.style.color == "red"){
+		leftRed.style.color = "red";
+		rightRed.style.color = "black";
+	}
+}
+
+
+var pos = 400;
+var pos1 = 0;
+
+var posy1 = 12;
+var posy = 12;
+//var elem = document.getElementById("animateDrop"); 
+var ina = false;
+var ina1 = false;
+function mouseOverRight(obj) {
+	
+    var id = setInterval(frame, 1);
+	
+	function frame() {
+    if (pos == 575 || ina == false  ) {
+      clearInterval(id);
+	 
+    } else {
+      pos++; 
+	  posy++;  
+	  obj.style.backgroundColor =  "rgb(204, 201, 124)";
+	  obj.style.borderStyle = "solid";
+	  obj.style.borderColor = "rgb(204, 201, 124)";
+	  obj.style.borderRightColor = "black";
+	  obj.style.borderRightWidth = "5px";
+	  obj.style.width = posy + 'px'; 
+	
+	  //obj.innerHTML = posy;
+	  
+	  }
+  }if(obj.onmouseenter){
+		ina = true;
+		
+    }	
+}
+
+function mouseExitRight(obj) {
+
+	var id = setInterval(frame, 1);
+	
+    function frame() {
+	
+    if (pos == 400 || ina == true) {
+      clearInterval(id);  
+	  obj.style.borderStyle = "none";
+	  obj.style.backgroundColor =  "rgb(204, 201, 124)";
+    } else {
+      pos--; 
+	  posy--;
+	 
+	  obj.style.width = posy + 'px'; 
+	   obj.style.backgroundColor =  "rgb(204, 201, 124)";
+    }
+	
+	
+  }
+  if(obj.onmouseleave){
+		ina = false;		
+    }
+}
+function mouseOverLeft(obj) {
+	
+    var id = setInterval(frame, 1);
+	
+	function frame() {
+    if (pos1 == 175 || ina1 == false  ) {
+      clearInterval(id);
+	obj.style.backgroundColor =  "rgb(204, 201, 124)";
+    } else {
+      pos1++; 
+	  posy1++;
+	  obj.style.backgroundColor =  "rgb(204, 201, 124)";
+	  obj.style.borderStyle = "solid";
+	  obj.style.borderColor = "rgb(204, 201, 124)";
+	  obj.style.borderLeftColor = "black";
+	  obj.style.borderLeftWidth = "5px";
+	  obj.style.width = posy1 + 'px'; 
+	  obj.style.left = -posy1 + 'px';
+	  // obj.innerHTML = posy1;
+	  }
+  }if(obj.onmouseenter){
+		ina1 = true;
+		
+    }	
+}
+
+function mouseExitLeft(obj) {
+
+	var id = setInterval(frame, 1);
+	
+    function frame() {
+	
+    if (pos1 == 0 || ina1 == true) {
+      clearInterval(id);  
+	  obj.style.borderStyle = "none";
+	  obj.style.left = 0 + 'px'; 
+	  //obj.style.backgroundColor = "black";
+    } else {
+      pos1--; 
+	  posy1--;
+	  obj.style.width = posy1 + 'px'; 
+	  obj.style.left = -posy1 + 'px';
+	 
+	 // obj.innerHTML = posy1;
+    }
+	
+	
+  }
+  if(obj.onmouseleave){
+		ina1 = false;		
+    }
+}
+
+</script>
+  
+  </body>
+</html>

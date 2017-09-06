@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Profile</title>
+	
+	 <style>
+ 
+	div.container{
+	
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		background-color: gray;
+		left: 0px;
+		top: 0px;
+		margin: 0;
+		margin-right: 0;
+		overflow-y:auto;
+		overflow-x:auto;
+	}
+	div.card{
+	
+		position:absolute;
+		width: 30%;
+		height: 75%;
+		background-color: gray;
+		left: 1.953%;
+		top: 100px;
+		margin: 0;
+		margin-right: 0;
+		border-style: solid;
+		border-color: white;
+	}
+	header {
+		position: relative;
+		width 100%;
+		height: 50px;
+		background-color: black;
+	}
+	
+	.create{
+		position:absolute;
+		left: 35%;
+		top: 200px;
+		width: 100px;
+		height: 100px;
+		background-color: black;
+		border-radius: 100px 100px 100px 100px;
+		opacity: .5;
+		overflow-x: hidden;
+		
+		
+	}
+	.create:active{
+	outline: none;
+		border: none;
+	}
+	.create:focus{
+	
+		outline:0;
+	}
+	.fa fa-plus{
+		position: absolute;
+		left: 45px;
+		top: 45px;
+	}
+  </style> 
+  </head>
+ 
+  <body>
+  <div class = "container" id ="c" style = "white-space: nowrap; overflow-x:hidden;" >
+	<header>
+		<i class="fa fa-vcard-o" style="position: absolute; bottom: 5px; left: 5px; font-size:36px; color: white"></i>
+		
+	</header>
+	
+	<div class = "card">
+		<p style = "position: absolute; top: -20px; left: 25px; font-size:32px; color: white">Profile:</p>
+		<p style=" position: absolute; top: 70px; left: 25px"  id="user">Email: </p>
+		<p style=" position: absolute; top: 120px; left: 25px"  id="fName">First Name: </p>
+		<p style=" position: absolute; top: 170px; left: 25px"  id="lName">Last Name: </p>
+		<p style=" position: absolute; top: 220px; left: 25px"  id="bDay">Birthday: </p>
+		<p style=" position: absolute; top: 270px; left: 25px"  id="gen">Gender: </p>
+		<p style=" position: absolute; top: 320px; left: 25px"  id="particGroups">Number of Contributions:</p>
+		<p style=" position: absolute; top: 370px; left: 25px"  id="activeGroups">Involved Groups:</p>
+		<p style=" position: absolute; top: 420px; left: 25px"  id="impact">Impact of Contributions:</p>
+		<p style=" position: absolute; top: 470px; left: 25px"  id="discussions">Active Discussions:</p>
+		
+	</div>
+	
+	<button class = "create" onclick = "add()" id = "create"> <i class="fa fa-plus" style="position: absolute; left: 31px; top: 29px; font-size:48px; color:white; white-space: nowrap; overflow:hidden;"></i></button>
+  </div>
+  
+  </body>
+  
+  <script> 
+  
+	var _selectIndex = 0;
+	
+	var left = 0;
+	var topp = 100;
+	var leftAdd = 0;
+	var go = 25;
+	var toppAdd = 200;
+	
+	var elementList = new Array();
+  function add() {
+  
+	go += 10;
+	var l = "left: " + go + "%;";
+	var t = "top: " + topp + "px;";
+    var para = document.createElement("DIV");
+   
+	para.setAttribute("id", _selectIndex++);
+	para.setAttribute("style", "position: absolute; width: 150px; height: 300px; border-style: solid; border-color: white;" + l + t);
+	
+	var element = document.getElementById("c");
+	var child = document.getElementById("create");
+	
+	document.getElementById("c").appendChild(para);   
+	
+	left = go;
+	leftAdd = left + 10;
+		
+	var move = document.getElementById(para.id);
+
+	var pos = 0;
+	var id = setInterval(frame, 5);
+	
+	refresh();
+	
+	function frame() {
+	
+	if (pos == 350) {
+      clearInterval(id);
+    } else {
+		
+		if(left >= 90){
+		
+		go = 35;
+		left = 35;
+		leftAdd = 45;
+		topp += 320;
+		toppAdd += 320;
+		
+		}else if(left < 90){ 
+		pos +=350; 
+		//alert(left);
+		 move.style.top = topp + 'px';  
+		 move.style.left = left + '%'; 
+	     child.style.left = leftAdd + '%';
+         child.style.top = toppAdd + 'px';  
+		}
+		
+	  }
+    }
+  }
+
+function refresh(){
+	var count = 0;
+	for (i = 0; i < _selectIndex; i++){
+	
+		count++;
+		elementList[i] = count;
+		//alert(elementList[i]);
+	}
+}
+
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script type="text/javascript" src="ajax.js"></script>
+  		<script type="text/javascript">
+	
+ document.getElementById("user").innerHTML = "Email: " + sessionStorage.getItem("use");
+ document.getElementById("fName").innerHTML = "First Name: " + sessionStorage.getItem("f");
+ document.getElementById("lName").innerHTML = "Last Name: " + sessionStorage.getItem("l");
+ document.getElementById("bDay").innerHTML = "Birthday: " + sessionStorage.getItem("bDay");
+ document.getElementById("gen").innerHTML = "Gender: " + sessionStorage.getItem("gen");
+
+		
+		</script>
+</html>
